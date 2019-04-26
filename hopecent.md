@@ -56,6 +56,7 @@
 - 编辑 resources/sass/app.scss 文件，留下 `@import '~bootstrap/scss/bootstrap'` 这一行
 - 保证 `npm run watch-poll` 一直运行，这样就会将 .scss 文件编译成 .css 文件（保存在public/css里面）
 - 项目默认的跟目录是 public
+- 解决静态缓存：在 webpack.mix.js 后面加上 .version() 即可，此时要求重启 `npm run watch-poll` 编译
 
 # nginx 隐藏 index.php
 
