@@ -46,6 +46,28 @@
     - $ git push -u origin master
 - 检查是否提交成功
 
+## 引入 bootstrap
+- 安装 yarn：https://yarnpkg.com/en/docs/install#windows-stable
+- 下载后安装，再配置一下环境变量（win10系统）
+- Laravel 默认集成了 bootstrap，但是需要一定的配置
+- cd /www/Larave/
+- yarn install --no-bin-links
+- yarn add cross-env
+- 编辑 resources/sass/app.scss 文件，留下 `@import '~bootstrap/scss/bootstrap'` 这一行
+- 保证 `npm run watch-poll` 一直运行，这样就会将 .scss 文件编译成 .css 文件（保存在public/css里面）
+- 项目默认的跟目录是 public
+
+# nginx 隐藏 index.php
+
+打开 phpstudy 项目对应的配置文件 vhosts.conf 加上，之后重启 phpstudy
+
+```
+autoindex  on;
+if (!-e $request_filename) {
+    rewrite ^/(.*)$ /index.php/$1;
+}
+```
+
 # 英文单词
 
 - kernel：中心、核心
