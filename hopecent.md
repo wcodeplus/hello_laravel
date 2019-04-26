@@ -23,6 +23,29 @@
 - 视图：    /www/Lavarel/resources/views/
 - 路由：    /www/Lavarel/routes/
 
+## git 使用
+- $ git config --global user.name "Your Name"           设置用户名
+- $ git config --global user.email your@example.com     设置邮箱
+- $ git config --global push.default simple             设置默认提交分支
+- $ cd "../www/Laravel"                                 进入项目根目录
+- $ git init                                            初始化git
+- $ git config --global core.autocrlf true              设置换行和回车通用
+- $ git add -A                                          将目录下全部文件添加到git缓存
+- $ git status                                          查看此时的git状态
+- $ git commit -m "第一次提交"                           第一次提交的git
+- $ git log                                             查看git日志
+
+## github 使用
+- 注册和登录
+- 设置 ssh key：复制 /administrator/.ssh/id_rsa.pub 里面的值
+- 进入 github ssh 令牌管理页面：https://github.com/settings/keys 
+- 新建一个 ssh key
+- 新建一个 github 仓库：填仓库名字和描述即可，其他不变
+- 提交代码到仓库：
+    - $ git remote add origin git@github.com:wcodeplus/hello_laravel.git
+    - $ git push -u origin master
+- 检查是否提交成功
+
 # 英文单词
 
 - kernel：中心、核心
