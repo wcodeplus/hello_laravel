@@ -69,6 +69,11 @@ if (!-e $request_filename) {
 }
 ```
 
+# 数据库迁移
+
+- 低版本的 mysql 数据库进行 php artisan migrate 操作时会报长度限制的错
+- 参考：https://www.cnblogs.com/betx/p/6544090.html
+
 # 英文单词
 
 - kernel：中心、核心
